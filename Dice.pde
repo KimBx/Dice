@@ -1,10 +1,12 @@
 void setup()
 {
-	noLoop();
+	size(300,300);
+  noLoop();
 }
 void draw()
 {
-	//your code here
+	Die bob = new Die(50,150);
+  bob.show();
 }
 void mousePressed()
 {
@@ -19,10 +21,11 @@ class Die //models one single dice cube
 	}
 	void roll()
 	{
-		//your code here
+	  
 	}
 	void show()
 	{
-		//your code here
+		rect(10,10,30,30,8);
+    
 	}
 }
