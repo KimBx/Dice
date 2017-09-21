@@ -1,14 +1,15 @@
 Die bob;
 void setup()
 {
-  size(300, 300);
+  size(1920, 1080);
   noLoop();
+  background(122,56,19);
 }
 void draw()
 {
-  for (int y = 0; y<=300; y+=60)
+  for (int y = 0; y<=1080; y+=60)
   {
-    for (int x = 0; x<=300; x+=60)
+    for (int x = 0; x<=1920; x+=60)
     {
       Die bob = new Die(x, y);
       bob.show();
@@ -38,8 +39,9 @@ class Die //models one single dice cube
   void show()
   {
     int num = (int)(Math.random()*6)+1;
+    fill(255);
     rect(myX, myY, 50, 50, 15);
-
+    fill(0);
     if (num == 1)
     {
       ellipse(myX+25, myY+25, 10, 10);
