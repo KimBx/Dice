@@ -1,20 +1,28 @@
-Die bob;
+Die casino;
 void setup()
 {
-  size(1920, 1080);
+  size(600, 600);
   noLoop();
-  background(122,56,19);
 }
 void draw()
 {
-  for (int y = 0; y<=1080; y+=60)
+  background(122, 56, 19);
+  int sum = 0;
+  for (int y = 0; y<=500; y+=60)
   {
-    for (int x = 0; x<=1920; x+=60)
+    for (int x = 0; x<=550; x+=60)
     {
-      Die bob = new Die(x, y);
-      bob.show();
+      Die casino = new Die(x, y);
+      casino.show();
+      if (casino.value < 7)
+      {
+        sum = sum + casino.value;
+      }
     }
   }
+  System.out.println(sum);
+  text("Total = " + sum,250,550);
+
 }
 
 
@@ -26,10 +34,10 @@ void mousePressed()
 class Die //models one single dice cube
 {
   boolean dice;
-  int myX, myY, num;
+  int myX, myY, num, value;
   Die(int x, int y) //constructor
   {
-
+    value = (int)(Math.random()*6)+1;
     myX = x;
     myY = y;
   }
