@@ -20,7 +20,6 @@ void draw()
       }
     }
   }
-  System.out.println(sum);
   textSize(30);
   text("Total = " + sum,210,570);
 
