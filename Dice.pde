@@ -6,7 +6,7 @@ void setup()
 }
 void draw()
 {
-  background(122, 56, 19);
+  background(190, 56, 190);
   int sum = 0;
   for (int y = 0; y<=500; y+=60)
   {
@@ -21,7 +21,8 @@ void draw()
     }
   }
   System.out.println(sum);
-  text("Total = " + sum,250,550);
+  textSize(30);
+  text("Total = " + sum,210,570);
 
 }
 
